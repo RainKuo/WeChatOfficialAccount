@@ -37,6 +37,7 @@ func PostHandler(w http.ResponseWriter, r *http.Request) {
 func StartServer() {
 	// 注册路由
 	http.HandleFunc("/", helloHandler)
+	http.HandleFunc("/post", PostHandler)
 
 	// 启动 HTTP 服务，监听 8080 端口
 	fmt.Println("Starting server on :8080...")
